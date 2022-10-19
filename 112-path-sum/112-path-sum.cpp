@@ -27,6 +27,7 @@ public:
         while(p || !stack.empty()){
 
             while(p){
+              
                 stack.push(p);
                 cout << p->val << endl;
                 // set value
