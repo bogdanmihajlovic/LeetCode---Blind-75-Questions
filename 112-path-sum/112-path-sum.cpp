@@ -32,11 +32,14 @@ public:
                 // set value
                 if(p->left){
                     p->left->val = p->val - p->left->val;
-            
+                    
+                    if(p->left->val == 0 && (!p->left->left && !p->left->right))
+                        return true;
                 }
                 if(p->right){
                     p->right->val = p->val - p->right->val;
-             
+                    if(p->right->val == 0 && (!p->right->left && !p->right->right))
+                        return true;
                 }
                 p = p->left; 
                 
