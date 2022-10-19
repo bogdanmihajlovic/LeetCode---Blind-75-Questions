@@ -42,16 +42,15 @@ public:
                         return true;
                 }
                 p = p->left; 
-                
-               
-             
+                 
             }
 
             p = stack.top();
+            stack.pop();
             if(p->val == 0 && (!p->left && !p->right))
                return true;
             p = p->right;
-            stack.pop();
+            
         }
 
         return false;
