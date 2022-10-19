@@ -29,11 +29,10 @@ public:
             while(p){
               
                 stack.push(p);
-                cout << p->val << endl;
+              
                 // set value
                 if(p->left){
                     p->left->val = p->val - p->left->val;
-                    
                     if(p->left->val == 0 && (!p->left->left && !p->left->right))
                         return true;
                 }
