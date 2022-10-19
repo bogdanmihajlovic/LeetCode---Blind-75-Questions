@@ -30,10 +30,14 @@ public:
                 stack.push(p);
                 cout << p->val << endl;
                 // set value
-                if(p->left)
+                if(p->left){
                     p->left->val = p->val - p->left->val;
-                if(p->right)
+            
+                }
+                if(p->right){
                     p->right->val = p->val - p->right->val;
+             
+                }
                 p = p->left; 
                 
                
